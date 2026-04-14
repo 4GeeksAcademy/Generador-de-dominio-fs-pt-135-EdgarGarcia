@@ -1,11 +1,32 @@
-import "bootstrap";
-import "./style.css";
+let pronombre = ['the', 'our'];
+let adjetivos = ['great', 'big'];
+let sustantivos = ['jogger', 'racoon'];
 
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+console.log("---- FOR ----");
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+for (let posicionPronombre = 0; posicionPronombre < pronombre.length; posicionPronombre++) {
+  for (let posicionAdjetivo = 0; posicionAdjetivo < adjetivos.length; posicionAdjetivo++) {
+    for (let posicionSustantivo = 0; posicionSustantivo < sustantivos.length; posicionSustantivo++) {
+
+      let dominio = `${pronombre[posicionPronombre]}${adjetivos[posicionAdjetivo]}${sustantivos[posicionSustantivo]}.com`;
+
+      console.log(dominio);
+    }
+  }
+}
+
+
+console.log("---- FOREACH ----");
+
+pronombre.forEach(function(cadaPronombre) {
+  adjetivos.forEach(function(cadaAdjetivo) {
+    sustantivos.forEach(function(cadaSustantivo) {
+
+      let dominio = `${cadaPronombre}${cadaAdjetivo}${cadaSustantivo}.com`;
+
+      console.log(dominio);
+
+    });
+  });
+});
